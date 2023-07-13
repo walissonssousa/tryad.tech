@@ -1,0 +1,91 @@
+
+RewriteOptions inherit
+RewriteEngine On
+#RewriteBase /
+# Adicionar o barra (/) no final do endereço URL
+#RewriteCond %{REQUEST_URI} /$
+#RewriteRule . %{REQUEST_URI} [L,R=301]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond    %{HTTP_HOST} !^\. [NC]
+RewriteRule    ^(.+[^/])/$ https://%{HTTP_HOST}/$1 [R=301,L]
+AddType application/x-httpd-php .html .htm 
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+#RewriteCond %{HTTP_HOST} ^www\.(.*)
+#RewriteRule (.*) http://%1/$1 [R=301,L]
+# RewriteCond %{HTTP_HOST} !^www\.heliosfleury\.com\.br
+# RewriteRule (.*) http://www.heliosfleury.com.br/$1 [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^contato$ contato.php  
+RewriteRule ^blogs$ blog.php 
+RewriteRule ^blog/([a-zA-Z-0-9-_]+)$ desc-blog.php?id=$1
+RewriteRule ^tratamentos$ tratamentos.php
+RewriteRule ^tratamento/odontologia-sono$ odontologia-sono.php [L]
+RewriteRule ^tratamento/([a-zA-Z-0-9-_]+)$ desc-tratamentos.php?id=$1 
+
+RewriteRule ^tecnologias/([a-zA-Z-0-9-_]+)$ desc-tecnologias.php?id=$1
+RewriteRule ^profissionais$ profissionais.php
+RewriteRule ^profissional/([a-zA-Z-0-9-_]+)$ desc-profissionais.php?id=$1
+RewriteRule ^busca$ busca.php
+RewriteRule ^sobre$ sobre.php
+RewriteRule ^sucesso$ sucesso.php
+RewriteRule ^sitemap.xml$ sitemap.xml
+RewriteRule ^robots.txt$ robots.txt
+RewriteRule ^painel/$ painel
+ErrorDocument 404 erros/404.php
+ErrorDocument 500 erros/500.php
+ErrorDocument 403 erros/403.php
+
+## EXPIRES CACHING ##
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType image/jpg "access 1 year"
+ExpiresByType image/jpeg "access 1 year"
+ExpiresByType image/gif "access 1 year"
+ExpiresByType image/png "access 1 year"
+ExpiresByType text/css "access 1 month"
+ExpiresByType text/html "access 1 month"
+ExpiresByType application/pdf "access 1 month"
+ExpiresByType text/x-javascript "access 1 month"
+ExpiresByType application/x-shockwave-flash "access 1 month"
+ExpiresByType image/x-icon "access 1 year"
+ExpiresDefault "access 1 month"
+</IfModule>
+## EXPIRES CACHING ##
+
+# <ifModule mod_headers.c>   
+# Header unset ETag
+# </ifModule>
+# FileETag None
+
+# <IfModule mod_headers.c>
+#     <FilesMatch "\.(ico|gif|jpg|jpeg|png)$">
+#           Header set Cache-Control "max-age=31536000"
+#     </FilesMatch>
+#     <FilesMatch "\.(css|js)$">
+#           Header set Cache-Control "max-age=31536000"
+#     </FilesMatch>
+# </IfModule>
+
+# #do not make the programming language version visible
+# Header always unset X-Powered-By
+
+# #prevent attacks click-jacking
+# Header always set X-Frame-Options "SAMEORIGIN"
+# Header set X-Frame-Options "DENY"
+
+# # prevent mime based attacks
+# Header set X-Content-Type-Options "nosniff"
+
+# #additional HttpOnly flag
+# header CookieOptions option = new CookieOptions {Expires = DateTime.Now.AddHours(24), HttpOnly = true};
+
+# header Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+
+# header Content-Security-Policy: policy
+# header X-WebKit-CSP: policy
+
+
