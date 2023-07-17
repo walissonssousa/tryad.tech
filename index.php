@@ -45,134 +45,59 @@ $convenios = $puxaConvenios->rsDados();
         }
             
         </style>
-        <section class="banner-two clearfix" style="background-image:url(<?php echo SITE_URL.'/img/'.$puxaBanners->foto?>)">
+        <section class="banner-two clearfix" style="background-image:url(<?php echo SITE_URL.'/img/'.$puxaBanners->foto?>);height:757px">
             <div class="container">
                 <div class="row">
-                    <div class="col-xl-12">
+                    <div class="col-xl-6 col-lg-6">
                         <div class="banner-two__inner-box">
                             <div class="banner-two__content">
                                 <div class="section-title">
-                                    <div class="section-title__tagline wow slideInUp animated" data-wow-delay="0.2s" data-wow-duration="1500ms">
-                                        <span class="left"></span>
-                                        <h4><?php echo $puxaBanners->titulo1?></h4>
-                                    </div>
-                                    <h2 class="section-title__title wow slideInUp animated" data-wow-delay="0.3s" data-wow-duration="1500ms"><?php echo $puxaBanners->titulo2?></h2>
+                                    <h1 class="section-title__title wow slideInUp animated" data-wow-delay="0.3s" data-wow-duration="1500ms"><?php echo $puxaBanners->titulo2?></h1>
                                 </div>
                                 <p class="banner-two__text wow slideInUp animated" data-wow-delay="0.4s" data-wow-duration="1500ms"><?php echo $puxaBanners->breve?></p>
                                 <?php if ($puxaBanners->tem_botao = "S"){?>
                                 <div class="banner-two__btn wow slideInUp animated" data-wow-delay="0.5s" data-wow-duration="1500ms">
-                                    <a href="<?php echo $puxaBanners->link_botao?>" aria-label="<?php echo $puxaBanners->texto_ancora?>" class="thm-btn"><?php echo $puxaBanners->nome_botao?> <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                                    <a href="<?php echo $puxaBanners->link_botao?>" aria-label="<?php echo $puxaBanners->texto_ancora?>" class="thm-btn"><?php echo $puxaBanners->nome_botao?></a>
                                 </div>
                                 <?php }?>
                             </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="image-two-left">
+                            <img src="<?php echo SITE_URL.'/img/'.$home->foto?>" alt=""/>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="features-three" style="background-image: url(<?php echo SITE_URL.'/img/'.$home->foto?>);">
+        <section class="features-three">
             <div class="features-three__content-box">
                 <div class="container">
-                    <div class="section-title text-center">
-                        <div class="section-title__tagline">
-                            <span class="left"></span>
-                            <h4><?php echo $home->titulo?></h4><span class="right"></span>
-                        </div>
-                        <h2 class="section-title__title"><?php echo $home->titulo2?></h2>
-                    </div>
                     <div class="row">
-                        <div class="col-xl-3 col-lg-3 col-md-6 wow " data-wow-delay="0ms"
-                            data-wow-duration="1000ms">
-                            <div class="features-three__single text-center">
-                                <div class="layer-outer" style="background-image: url(<?php echo SITE_URL.'/img/'.$home->foto_3?>);">
+                        <div class="col-lg-6">
+                            <div class="section-title text-center">
+                                <div class="section-title__tagline">
+                                    <h4><?php echo $home->titulo?></h4>
                                 </div>
-                                <div class="features-three__single-icon">
-                                    <img src="<?php echo SITE_URL.'/img/'.$home->foto_2?>" alt="<?php echo $home->legenda?>" />
-                                </div>
-                                <?php if ($home->link_botao <> ""){?>
-                                <h4 class="features-three__single-title"><a href="<?php  echo $home->link_botao?>" aria-label="<?php echo $home->texto_ancora1?>"><?php echo $home->titulo3?></a></h4>
-                                <?php } else {?>
-                                <h4 class="features-three__single-title"><?php echo $home->titulo3?></h4> 
-                                <?php }?>
-                                <?php echo $home->breve?>
-                                <?php if ($home->link_botao <> ""){?>
-                                <div class="features-three__single-btn">
-                                    <a href="<?php  echo $home->link_botao?>" aria-label="<?php echo $home->texto_ancora1?>"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
-                                </div>
-                                <?php }?>
+                                <h2 class="section-title__title"><?php echo $home->titulo2?></h2>
+                            </div>
+                            <div class="testimonial-two__left">
+                                <div class="shape1 float-bob-y"><img src="<?php echo SITE_URL.'/img/'.$home->foto_23?>" alt="<?php echo $home->legenda19?>" /></div>
+                                <div class="shape4 "><img src="<?php echo SITE_URL.'/img/'.$home->foto_26?>" alt="<?php echo $home->legenda22?>" /></div>
                             </div>
                         </div>
-
-                        <div class="col-xl-3 col-lg-3 col-md-6 wow " data-wow-delay="100ms"
-                            data-wow-duration="1000ms">
-                            <div class="features-three__single text-center">
-                                <div class="layer-outer" style="background-image: url(<?php echo SITE_URL.'/img/'.$home->foto_5?>);">
+                        <div class="col-xl-6">
+                            <div class="about-two__right">
+                                <div class="about-two__right-inner">
+                                    <?php echo $home->breve6?>
                                 </div>
-                                <div class="features-three__single-icon">
-                                    <img src="<?php echo SITE_URL.'/img/'.$home->foto_4?>" alt="<?php echo $home->legenda2?>" />
-                                </div>
-                                <?php if ($home->link_botao2 <> ""){?>
-                                <h4 class="features-three__single-title"><a href="<?php  echo $home->link_botao2?>" aria-label="<?php echo $home->texto_ancora2?>"><?php echo $home->titulo4?></a></h4>
-                                <?php } else {?>
-                                <h4 class="features-three__single-title"><?php echo $home->titulo4?></h4> 
-                                <?php }?>
-                                <?php echo $home->breve2?>
-                                <?php if ($home->link_botao2 <> ""){?>
-                                <div class="features-three__single-btn">
-                                    <a href="<?php  echo $home->link_botao2?>" aria-label="<?php echo $home->texto_ancora2?>"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
-                                </div>
-                                <?php }?>
-                            </div>
-                        </div>
-
-                        <div class="col-xl-3 col-lg-3 col-md-6 wow " data-wow-delay="0ms"
-                            data-wow-duration="1000ms">
-                            <div class="features-three__single text-center">
-                                <div class="layer-outer" style="background-image: url(<?php echo SITE_URL.'/img/'.$home->foto_7?>);">
-                                </div>
-                                <div class="features-three__single-icon">
-                                    <img src="<?php echo SITE_URL.'/img/'.$home->foto_6?>" alt="<?php echo $home->legenda4?>" />
-                                </div>
-                                <?php if ($home->link_botao3 <> ""){?>
-                                <h4 class="features-three__single-title"><a href="<?php  echo $home->link_botao3?>" aria-label="<?php echo $home->texto_ancora3?>"><?php echo $home->titulo5?></a></h4>
-                                <?php } else {?>
-                                <h4 class="features-three__single-title"><?php echo $home->titulo5?></h4> 
-                                <?php }?>
-                                <?php echo $home->breve3?>
-                                <?php if ($home->link_botao3 <> ""){?>
-                                <div class="features-three__single-btn">
-                                    <a href="<?php  echo $home->link_botao3?>" aria-label="<?php echo $home->texto_ancora3?>"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
-                                </div>
-                                <?php }?>
-                            </div>
-                        </div>
-
-                        <div class="col-xl-3 col-lg-3 col-md-6 wow" data-wow-delay="100ms"
-                            data-wow-duration="1000ms">
-                            <div class="features-three__single text-center">
-                                <div class="layer-outer" style="background-image: url(<?php echo SITE_URL.'/img/'.$home->foto_9?>);">
-                                </div>
-                                <div class="features-three__single-icon">
-                                    <img src="<?php echo SITE_URL.'/img/'.$home->foto_8?>" alt="<?php echo $home->legenda5?>" />
-                                </div>
-                                <?php if ($home->link_botao4 <> ""){?>
-                                <h4 class="features-three__single-title"><a href="<?php  echo $home->link_botao4?>" aria-label="<?php echo $home->texto_ancora4?>"><?php echo $home->titulo6?></a></h4>
-                                <?php } else {?>
-                                <h4 class="features-three__single-title"><?php echo $home->titulo6?></h4> 
-                                <?php }?>
-                                <?php echo $home->breve4?>
-                                <?php if ($home->link_botao4 <> ""){?>
-                                <div class="features-three__single-btn">
-                                    <a href="<?php echo $home->link_botao4?>" aria-label="<?php echo $home->texto_ancora4?>"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
-                                </div>
-                                <?php }?>
                             </div>
                         </div>
                     </div>
-                    <div class="service-two__btn three-btn">
-                    <a href="<?php echo $home->link_botao14?>" class="thm-btn" aria-label="<?php echo $home->texto_ancora14?>"><?php echo $home->nome_botao14?><i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
-                </div>
+                    
+                    
                 </div>
             </div>
         </section> 

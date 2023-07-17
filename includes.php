@@ -9,6 +9,6 @@ include "Class/menus.class.php";
 $menusAtivo = Menus::getInstance(Conexao::getInstance())->rsDados();
 
 
-define('SITE_URL', 'http://localhost/tryad.tech');
+define('SITE_URL', 'http://localhost/projetos/tryad.tech/tryad.tech/');
 
 ?>

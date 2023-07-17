@@ -620,7 +620,7 @@ if(empty($TextosInstanciada)) {
 				if(isset($_POST['legenda32']) && !empty($_POST['legenda32'])){
 					$legenda32 = $_POST['legenda32'];
 				}else{
-					$legenda33 = '';	
+					$legenda32 = '';	
 				}
 				
 				if(isset($_POST['legenda33']) && !empty($_POST['legenda33'])){
@@ -895,7 +895,7 @@ if(empty($TextosInstanciada)) {
 				} catch(PDOException $erro){
 					echo $erro->getMessage(); 
 				}
-				// exit;
+				 //exit;
 				echo "	<script>
 							window.location='{$redireciona}';
 						</script>";
