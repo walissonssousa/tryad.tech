@@ -564,11 +564,11 @@
 
 
 
-  if ($(".sticky-header__content").length) {
-    let navContent = document.querySelector(".main-menu").innerHTML;
-    let mobileNavContainer = document.querySelector(".sticky-header__content");
-    mobileNavContainer.innerHTML = navContent;
-  }
+  // if ($(".sticky-header__content").length) {
+  //   let navContent = document.querySelector(".main-menu").innerHTML;
+  //   let mobileNavContainer = document.querySelector(".sticky-header__content");
+  //   mobileNavContainer.innerHTML = navContent;
+  // }
 
 
 

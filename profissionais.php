@@ -21,7 +21,7 @@ $puxaEspecialista = $especialistas->rsDados();
 <body>
     <div class="page-wrapper">
 
-        <?php include "header.php"?>
+        <?php include "headerBranco.php"?>
 
         <div class="stricky-header stricky-header--style4 stricked-menu main-menu">
             <div class="sticky-header__content">
